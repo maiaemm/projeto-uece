@@ -1,35 +1,34 @@
 import React, { useState } from 'react';
-import './style.css'
+import './Login.css';
+import { Link } from 'react-router-dom'
 
 function Login() {
-  const [email, setEmail] = useState('Milshake');
-  const [senha, setSenha] = useState(0);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleChange = (evt) => setEmail(evt.target.value)
+  const handleChange2 = (evt) => setPassword(evt.target.value)
 
-  const handlePassword = (evt) => setSenha(evt.target.value)
-
-  const handleClick = (evt) => window.alert('Clicado!')
+  const handleClick = () => console.log(email, password);
 
   return (
-    <div className="login-container">
-      <h3>Olá! {email}</h3>
-      <div>
-        <img src="https://i.pinimg.com/originals/66/c0/f3/66c0f3951cf18634e632c383284ab1f7.png" alt="imagem do usuário" />
-      </div>
-      <label htmlFor='email-user'>Email: 
-        <input type="text" id='email-user' onChange={ handleChange } />
-      </label>
-      <div>
-      <label htmlFor="password-user">Senha:<p>Sua senha é: {senha}</p>
-        <input type="password" id="password-user" onChange={ handlePassword }/>
-      </label>
-      </div>
-      <p>
-        Não tem conta ? Crie agora.
-      </p>
-      <button onClick={handleClick}>Login</button>
+    <div id="login-container">
+      <h1>Login </h1>
+      <img className="bobinho" src="https://darlildo.files.wordpress.com/2014/08/regular-show-about-the-show.png" alt="foto-bobinho" />
+      <form action="">
+        <label for="email">E-mail</label>
+        <input  onChange={ handleChange } type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" />
+        <label for="password">Senha</label>
+        <input onChange={ handleChange2 } type="password" name="password" id="password" placeholder="Digite sua senha" />
+        <Link to="/forget" id="forgot-pass">Esqueceu a senha?</Link>
+          <Link to="/user" id="user-link">
+            <button onClick={ handleClick }>Login</button>
+          </Link>
+      </form>
+    <div id="register-container">
+      <Link to="/register">Ainda não tem uma conta?</Link>
     </div>
+  </div>
   );
 }
 
