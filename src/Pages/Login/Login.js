@@ -5,13 +5,11 @@ function Login() {
   const [email, setEmail] = useState('Milshake');
   const [senha, setSenha] = useState(0);
 
-  const handleChange = (evt) => {
-    setEmail(evt.target.value)
-  }
+  const handleChange = (evt) => setEmail(evt.target.value)
 
-  const handlePassword = (evt) => {
-    setSenha(evt.target.value)
-  }
+  const handlePassword = (evt) => setSenha(evt.target.value)
+
+  const handleClick = (evt) => window.alert('Clicado!')
 
   return (
     <div className="login-container">
@@ -23,14 +21,14 @@ function Login() {
         <input type="text" id='email-user' onChange={ handleChange } />
       </label>
       <div>
-      <label htmlFor="password-user">Senha:
+      <label htmlFor="password-user">Senha:<p>Sua senha é: {senha}</p>
         <input type="password" id="password-user" onChange={ handlePassword }/>
       </label>
       </div>
       <p>
         Não tem conta ? Crie agora.
       </p>
-      <p>Sua senha é: {senha}</p>
+      <button onClick={handleClick}>Login</button>
     </div>
   );
 }
