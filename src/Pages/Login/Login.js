@@ -13,7 +13,7 @@ function Login() {
 
   return (
     <div id="login-container">
-      <h1>Login </h1>
+      <h1>Login</h1>
       <img className="bobinho" src="https://darlildo.files.wordpress.com/2014/08/regular-show-about-the-show.png" alt="foto-bobinho" />
       <form action="">
         <label for="email">E-mail</label>
