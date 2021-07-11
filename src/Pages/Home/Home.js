@@ -6,14 +6,20 @@ function Home() {
   const { email, name, reference, size, inStock, value } = useContext(Context);
 
   useEffect(() => {
-    localStorage.setItem('email', email);
+    const getEmail = localStorage.getItem('email');
+    if(!getEmail) localStorage.setItem('email', email);
     const verify = localStorage.getItem('produtos');
-    const transform = [verify]
-    console.log(transform)
+    const transform = verify.length > 0
+    ? JSON.parse(localStorage.getItem('produtos'))
+    : localStorage.getItem('produtos');
     if(name !== '') {
-      localStorage.setItem('produtos', JSON.stringify([...transform, name]))
+      localStorage.setItem('produtos', JSON.stringify([...transform, {name, reference, size, inStock, value}]))
     } 
-  })
+    
+    // else {
+    //   localStorage.setItem('produtos', JSON.stringify([...JSON.parse(localStorage.getItem('produtos')),name]))
+    // }
+  });
 
   return (
   <div id="main-container">

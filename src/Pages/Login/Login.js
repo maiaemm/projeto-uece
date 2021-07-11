@@ -8,12 +8,10 @@ function Login() {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    const getStorage = localStorage.getItem('email')
-    if(!getStorage) {
-      localStorage.setItem('email', '');
-      localStorage.setItem('produtos', '');
-    }
-  }, [])
+    const getProducts = localStorage.getItem('produtos');
+    if(!getProducts)
+    localStorage.setItem('produtos', []);
+  })
 
   const handleChange = (evt) => setEmail(evt.target.value)
   const handleChange2 = (evt) => setPassword(evt.target.value)
