@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [lastName, setlastName] = useState('')
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [lastName, setlastName] = useState('');
 
   const handleChangeEmail = ({ target: { value } }) => {
     setEmail(value)
