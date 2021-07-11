@@ -12,6 +12,8 @@ function Login() {
   const handleClick = () => console.log(email, password);
 
   return (
+    <div className='box-container'>
+    
     <div id="login-container">
       <h1>Login </h1>
       <img className="bobinho" src="https://darlildo.files.wordpress.com/2014/08/regular-show-about-the-show.png" alt="foto-bobinho" />
@@ -28,6 +30,7 @@ function Login() {
     <div id="register-container">
       <Link to="/register">Ainda não tem uma conta?</Link>
     </div>
+  </div>
   </div>
   );
 }
