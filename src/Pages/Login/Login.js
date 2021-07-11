@@ -11,18 +11,28 @@ function Login() {
 
   const handleClick = () => console.log(email, password);
 
+  function validateEmail(email, senha) {
+    var re = /\S+@\S+\.\S+/;
+    if(re.test(email) && senha.length > 6) {
+      return false
+    }
+    return true
+  }
+
   return (
     <div id="login-container">
       <h1>Login </h1>
       <img className="bobinho" src="https://darlildo.files.wordpress.com/2014/08/regular-show-about-the-show.png" alt="foto-bobinho" />
       <form action="">
-        <label for="email">E-mail</label>
-        <input  onChange={ handleChange } type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" />
-        <label for="password">Senha</label>
-        <input onChange={ handleChange2 } type="password" name="password" id="password" placeholder="Digite sua senha" />
+        <label forFor="email">E-mail
+          <input onChange={ handleChange } type="email" name="email" id="email" placeholder="Digite seu e-email" />
+        </label>
+        <label HtmlFor="password">Senha
+          <input onChange={ handleChange2 } type="password" id="password" placeholder="Digite sua senha" />
+        </label>
         <Link to="/forget" id="forgot-pass">Esqueceu a senha?</Link>
           <Link to="/user" id="user-link">
-            <button onClick={ handleClick }>Login</button>
+            <button disabled={ validateEmail(email, password) } onClick={ handleClick }>Login</button>
           </Link>
       </form>
     <div id="register-container">

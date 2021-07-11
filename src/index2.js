@@ -1,16 +1,16 @@
-const Pessoa = {
-  detalhes: {
-    nome: 'Bruno',
-    idade: 13,
-  },
-  localizacao: {
-    cidade: 'Fortaleza',
-    bairro: 'Cheiro do queijo',
+const password = '12345675'
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  if(re.test(email) && password.length > 6) {
+    console.log('true')
   }
+  return re.test(email);
 }
 
-const { bairro } = Pessoa.localizacao
-// const {localizacao: { bairro } } = Pessoa
-const { detalhes: { idade } } = Pessoa
-
-console.log(idade)
+validateEmail('texto@texto.com')
+    
+console.log(validateEmail('texto@texto.com')); // true
+console.log(validateEmail('texto@texto')); // false
+console.log(validateEmail('texto.com')); // false
+console.log(validateEmail('texto')); // false

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import '../Register/Register.css';
+import './Register.css';
 
 function Register() {
   const [email, setEmail] = useState('')
@@ -27,7 +27,7 @@ function Register() {
       <form id="register-form" action="">
         <div class="full-box">
           <label for="email">E-mail</label>
-          <input onChange={ handleChangeEmail } type="email" name="email" id="email" placeholder="seuemail@seuemail.com" data-min-length="2" data-email-validate />
+          <input className="input-form" onChange={ handleChangeEmail } type="email" name="email" id="email" placeholder="seuemail@seuemail.com" data-min-length="2" data-email-validate />
         </div>
         <div class="half-box spacing">
             <label for="name">Nome</label>
@@ -46,13 +46,15 @@ function Register() {
           <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente" data-equal="password" />
         </div>
         <div>
-          <input type="checkbox" name="agreement" id="agreement" />
+          <input type="checkbox" name="agreement" id="agreement"/>
           <label for="agreement" id="agreement-label">Eu li e aceito os
             <Link to=""> termos de uso</Link>
           </label>
         </div>
         <div class="full-box">
-          <button id="btn-submit" type="button" onClick={ handleClick }>Registrar</button>
+          <Link to="/">
+            <button id="btn-submit" type="button" onClick={ handleClick }>Registrar</button>
+          </Link>
         </div>
       </form>
   </div>

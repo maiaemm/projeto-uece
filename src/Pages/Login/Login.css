@@ -11,3 +11,14 @@
 #login-container h1 {
   color: white;
 }
+
+.input-form {
+  border-radius: 16px;
+  border-bottom: 2px solid #323232;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.input-form:focus {
+  border-bottom: 2px solid rgb(250, 136, 7);
+}
