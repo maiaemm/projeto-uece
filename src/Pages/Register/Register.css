@@ -1,0 +1,63 @@
+.body{
+    padding-top: 5vh;
+    background-image: url('../../imagens/fundoDuzoto.jpeg') ;
+    background-size: cover;
+    background-position-y: -150px;
+    margin: 0;
+    padding: 100px 0px 230px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+#main-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+/*descrições das caixas*/
+.describes{
+    font-weight: bold;
+    font-size: .8rem;
+    display: block;
+    outline: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+
+#btn-submit {
+    background-color: rgb(250, 136, 7);
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+    outline: none;
+    width: 50%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+.full-box {
+    padding: 16px;
+    align-items: center;
+}

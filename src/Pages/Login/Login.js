@@ -25,24 +25,27 @@ function Login() {
   }
 
   return (
+    <div className='box-container'>
+    <span>a</span>
     <div id="login-container">
       <h1>Login </h1>
       <img className="bobinho" src="https://darlildo.files.wordpress.com/2014/08/regular-show-about-the-show.png" alt="foto-bobinho" />
       <form action="">
-        <label htmlFor="email">E-mail
-          <input onChange={ handleChange } type="email" name="email" id="email" placeholder="Digite seu e-email" />
+        <label className='describes' htmlFor="email">E-mail
+          <input className='input-form' onChange={ handleChange } type="email" name="email" id="email" placeholder="Digite seu e-email" />
         </label>
-        <label htmlFor="password">Senha
-          <input onChange={ handleChange2 } type="password" id="password" placeholder="Digite sua senha" />
+        <label className='describes' htmlFor="password">Senha
+          <input className='input-form' onChange={ handleChange2 } type="password" id="password" placeholder="Digite sua senha" />
         </label>
-        <Link to="/forget" id="forgot-pass">Esqueceu a senha?</Link>
+        <Link className='clicaveis' to="/forget" id="forgot-pass">Esqueceu a senha?</Link>
           <Link to="/user" id="user-link">
-            <button disabled={ validateEmail(email, password) }>Login</button>
+            <button className="btn-login" disabled={ validateEmail(email, password) }>Login</button>
           </Link>
       </form>
     <div id="register-container">
       <Link to="/register">Ainda não tem uma conta?</Link>
     </div>
+  </div>
   </div>
   );
 }
