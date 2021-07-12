@@ -9,21 +9,26 @@
     height: 800px;
     background-image: url('../../imagens/fundo.jpeg');
   
-    
   }
   
 #login-container {
-  background-color: #FFF;
+
+    background-color: #FFF;
     margin-left: auto;
     margin-right: auto;
     width: 400px;
-    padding: 20px 30px;
+    padding: 20px 18px;
     border-radius: 10px;
     text-align: center;
     vertical-align: middle ;
+    font-family: Helvetica;
+    color: #323232;
+    
+    
 }
 
 .login-container h1 {
+  font-family: Helvetica;
   color: #323232;
 }
 
@@ -42,44 +47,55 @@
   font-family: Helvetica;
   color: #323232;
   border: none;
+  margin-right: 13px;
 }
 
 .bot {
-  border-bottom: 2px solid #eb660d;
-    padding: 7px;
-    font-size: 1rem;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    background-color: rgb(250, 136, 7);
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: bold;
-    color: blanchedalmond;
-    border-radius: 16px;
-    width: 200px;
+  margin-top: 7%;
+ 	background-color:#ff7504;
+	border-radius:20px;
+	border:1px solid #ff7504;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:9px 160px;
+	text-decoration:none;
+	text-shadow:0px 1px 1px #ff7504;
+    
+ 
 
 }
 
 .input-form {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   font-family: Helvetica;
   color: #323232;
-  border-color: black;
+  /*border-radius: 1px;*/
+  width: 375px;
+  height: 35px;
+ 
+  
+
 }
 
 .describes {
+  font-family: Helvetica;
   display: block;
   width: 70%;
   text-align: left;
   font-weight: bold;
-    font-size: .8rem;
+  font-size: .8rem;
+  margin-left: 20px;
 }
 
 #register-container {
-  margin-bottom: 10px;
+  margin-top: 5%;
+  margin-left: 105px;
+  margin-bottom: 2px;
   display: flex;
 }
 #user-link {
